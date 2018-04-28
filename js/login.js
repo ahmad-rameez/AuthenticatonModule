@@ -5,7 +5,7 @@ function validate(){
     var password = document.getElementById("password").value;
     if ( username == "abc" && password == "123"){
         alert ("Login successfully");
-        window.location = "book.html"; // Redirecting to other page.
+        window.location = "book_view.html"; // Redirecting to other page.
     return false;
     }
     else{
