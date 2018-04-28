@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> Transparent Login Form Design </title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">   
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <script src="js/login.js"></script>  
 </head>
     <body>
     <div class="login-box">
     <img src="assets/avatar.png" class="avatar">
         
-            <form class="login">
+            <form class="login" method="post">
             <h1>Login Here</h1>
             <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username">
+            <input type="text" name="username" id="username" placeholder="Enter Username">
             <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password">
-            <input type="submit" name="submit" value="Login">
+            <input type="password" id="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="submit" id="submit" onclick="return validate()" value="Login">
             <p class="message">Dont have account? <a href="#">Register Here!</a></p>    
             </form>
         
         
-            <form class="register">
+            <form class="register" method="post">
             <h1>Register</h1>
             <p>Email ID</p>
             <input type="email" name="emailid" placeholder="Enter Email Id">
