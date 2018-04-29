@@ -5,7 +5,7 @@
   "main": "app.js",
   "repository": "https://github.com/psycho-valker/Assignment_Website.git",
   "author": "VelleLogz",
-  "license": "none",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "node app",
     "watch": "nodemon app && mongod"
