@@ -5,7 +5,7 @@ The application would involve 2 steps. First, there should be an authentication 
  
 Functionalities:
 </br>
-• To allow the client to sign up and save user data (username and password) in global javascript array(instead of database).
+• To allow the client to sign up and save user data (username and password).
 </br>
 • To allow the client to login using the above stored credentials.
 </br>
