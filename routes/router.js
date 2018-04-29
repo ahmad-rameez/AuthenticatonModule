@@ -33,10 +33,11 @@ router.post('/', function (req, res, next) {
 
     User.create(userData, function (error, user) {
       if (error) {
+        alert(error);
         return next(error);
       } else {
         req.session.userId = user._id;
-        return res.redirect('/profile');
+        return res.redirect('/');
       }
     });
 
@@ -48,7 +49,7 @@ router.post('/', function (req, res, next) {
         return next(err);
       } else {
         req.session.userId = user._id;
-        return res.redirect('/profile');
+        return res.redirect('/book_view.html');
       }
     });
   } else {
