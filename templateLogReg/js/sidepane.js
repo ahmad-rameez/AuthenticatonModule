@@ -31,12 +31,16 @@ $('#try1').on('changed.jstree', function (e, data) {
           var x=o.text;
           var c=0,f=0;
           var str="";
+          var offset="";
+          var alter=1;
           for(var z=0;z<x.length;z++){
               if(x[z]=='<'){c=1;}
               if(x[z]=='>'){c=0;f=1; continue;}
               if(!c && f==1)str+=x[z];
-              if(c==1 && f==1){
-                $('<li/>').text(str).appendTo(list);
+              if(c==1 && f==1 && str.length!=0){
+                if(alter){ offset="Question: ";alter=0;}
+                else {offset="Solution: ";alter=1;}
+                $('<div class="container-fluid" style="max-width:80%!important;margin-top:3%;padding-left:5%;"/>').text(offset+str).appendTo(list);
                 str="";
               }
           }
