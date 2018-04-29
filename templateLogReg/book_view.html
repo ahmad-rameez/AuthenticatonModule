@@ -6,27 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Book Contents</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="assets/vakata-jstree/dist/themes/default/style.min.css">
     <script type="text/javascript" src="assets/vakata-jstree/dist/jstree.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css">  -->
     
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <a href="/logout"><p>Logout</p></a>
+
     
-     <h2>A Nested List</h2>
-     <div style="float:left;margin:10px;padding:15px; min-height:400px;  min-width:10%; border:3px solid black;">
+       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#" style="font-size:30px;">BOOK CONTENTS</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse" style="font-size:25px;">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><div class="container-fluid">Home</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><div class="container-fluid">Books</div></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><div class="container-fluid">Contact</div></a>
+                </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/logout"><div class="container-fluid">Logout</div> <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0" id="node" style="float:right; padding-top:1%">
+              <input id="search"  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button id="searchnode" class="btn btn-info my-2 my-sm-0" onclick= "nodesearch()" type="submit"> Node Search</button>
+            </form>
+          </div>
+        </nav> 
+
+      
+    
+        
+    
+    <div class="row" style="padding-left:2%; padding-top:3%; margin-right:15px; margin-left:15px; margin-bottom:30px; padding-right:7%;">
+     <div class="book col-md-3" style="float:left;">
     		<p style="padding-bottom: 0px;margin-bottom: 5px;">GRADES:</p>
-      	<div id="try1" style="float:left; padding-top: 0px;margin-top: 0px;">
+      	<div id="try1" style="float:left; padding-top: 0px;margin-top: 0px;margin-bottom:7%;">
       	</div>   
      </div>
-     <div id="output" class="container-fluid" style="float:right; border: 5px solid #555; height: 400px; width:60%; margin:10px;margin-right:10%; padding:15px;">
+     <div id="output" class="container-fluid col-md-9" style="font-size:150%; float:right; border: 2px solid #555; height: 400px;margin-top:0%;">
      </div>
+    </div>
+
+    <footer class="page-footer container-fluid text-center" style="position: absolute; padding-top:10px; background-color:rgb(34, 33, 33)">
+        <ul class="list-inline">            
+            <li class="list-inline-item" style="margin:10px;"><a href="#"><div class="container-fluid"><i class="fa fa-facebook fa-2x"></i></a></li>
+            <li class="list-inline-item" style="margin:10px;"><a href="#"><div class="container-fluid"><i class="fa fa-twitter fa-2x"></i></a></li>
+            <li class="list-inline-item" style="margin:10px;"><a href="#"><div class="container-fluid"><i class="fa fa-linkedin fa-2x"></i></a></li>             
+            <li class="list-inline-item" style="margin:10px;"><a href="#"><div class="container-fluid"><i class="fa fa-google-plus fa-2x"></i></a></li>             
+        </ul>
+    </footer>
      <script src="js/sidepane.js"></script>
   </body>
 </html>

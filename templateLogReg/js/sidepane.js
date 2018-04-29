@@ -18,10 +18,17 @@ $(document).ready(function(){
             }
         }
         $('#try1').jstree({
+
+            "search":{
+                "case_sensitive": false,
+                "show_only_matches": true,
+            },
+
             "core": {
                 "check_callback" : true,
             },
             "plugins" : ["dnd","contextmenu","massload","search","unique","state"]
+
         });
 
     });
@@ -46,9 +53,22 @@ $('#try1').on('changed.jstree', function (e, data) {
               if(c==1 && f==1 && str.length!=0){
                 if(alter){ offset="Question: ";alter=0;}
                 else {offset="Solution: ";alter=1;}
-                $('<div class="container-fluid" style="max-width:80%!important;margin-top:3%;padding-left:5%;"/>').text(offset+str).appendTo(list);
+                // $('<div class="container-fluid" style="max-width:100%!important;margin-top:3%;padding-left:5%;"/>').text(offset+str).appendTo(list);
+                $(list).append('<div class="container-fluid" style="max-width:100%!important;margin-top:3%;padding-left:5%;">'+'<em style="font-weight:bold;">'+offset+'</em>'+str+'</div>');
                 str="";
               }
           }
       })
-	});
+    });
+    
+    function nodesearch(){
+        $(document).ready(function(){
+            var key = document.getElementById("search").value;
+
+            $("#nodesearch").click(function(){
+
+                $("#try1").jstree("search",key);
+
+            });
+        });
+    }
