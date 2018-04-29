@@ -6,7 +6,7 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 //connect to MongoDB
-mongoose.connect('mongodb://localhost/MYTA_BUSINESS_SOL');
+mongoose.connect('mongodb://localhost/MYTA_BUSINESS_SOL',{useMongoClient: true});
 var db = mongoose.connection;
 
 //handle mongo error
