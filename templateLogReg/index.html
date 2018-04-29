@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Transparent Login Form Design </title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <script src="js/login.js"></script>  
+</head>
+    <body>
+    <div class="login-box">
+    <img src="assets/avatar.png" class="avatar">
+        
+            <form class="login" action = "/" method="post">
+            <h1>Login Here</h1>
+            <p>Email Id</p>
+            <input type="text" name="logemail" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" name="logpassword" placeholder="Enter Password">
+            <input type="submit" name="submit" value="Login">
+            <p class="message">Dont have account? <a href="#">Register Here!</a></p>    
+            </form>
+        
+        
+            <form class="register" action = "/" method="post">
+            <h1>Register</h1>
+            <p>Email ID</p>
+            <input type="email" name="email" placeholder="Enter Email Id">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <p>Retype Password</p>
+            <input type="password" name="passwordConf" placeholder="Confirm Password">
+            <input type="submit" name="submit" value="Register">
+            <p class="message">Already registered? <a href="#">Login Here!</a></p>     
+            </form>
+        
+    </div>
+    
+    
+    <!--BootStrap JS Files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script>
+        $('.message a').click(function(){
+            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");    
+        });    
+    </script>
+    </body>
+</html>
