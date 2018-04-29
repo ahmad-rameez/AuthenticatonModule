@@ -17,14 +17,14 @@ $(document).ready(function(){
                 }
             }
         }
+        $('#try1').jstree();
     });
-   // $(function() {
-        //$('#try1').jstree();
-     // });
-});
-$("#clk").on('click',function(){
-    $('#try1').jstree();  
-   }); 
+      
+ });
+ 
+//$("#clk").on('click',function(){
+   // $('#try1').jstree();  
+  // }); 
   
 $('#try1').on('changed.jstree', function (e, data) {
       var objects = data.instance.get_selected(true)
@@ -49,3 +49,4 @@ $('#try1').on('changed.jstree', function (e, data) {
         //$('<li/>').text(str2).appendTo(list)
       })
     });
+///});
