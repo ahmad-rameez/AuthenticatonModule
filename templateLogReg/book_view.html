@@ -3,54 +3,23 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
     <title>Hello, world!</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/vakata-jstree/dist/themes/default/style.min.css">
     <script type="text/javascript" src="assets/vakata-jstree/dist/jstree.min.js"></script>
-    
+    <script src="js/sidepane.js"></script>
   </head>
   <body>
     <h1>Hello, world!</h1>
      <h2>A Nested List</h2>
-     
      <div style="float:left;margin:10px;padding:15px; min-height:400px;  min-width:10%; border:3px solid black;">
-    	<p style="padding-bottom: 0px;margin-bottom: 5px;">GRADES:</p>
-      <div id="try1" style="float:left; padding-top: 0px;margin-top: 0px;">
-      </div>
-        <!-- <button id="clk">click</button> -->      
-      </div>
-      <div id="output" style="float:right; border: 5px solid #555; height: 400px; min-width:7%;max-width:80%; margin:10px; padding:15px;">
-      </div>
-<script src="js/sidepane.js"></script>
-<!-- <script>
-$(function() {
-  $('#try1').jstree();
-});
-</script>
-
-// <script>
-//     $('#try').on('changed.jstree', function (e, data) {
-//   var objects = data.instance.get_selected(true)
-//   var leaves = $.grep(objects, function (o) { return data.instance.is_leaf(o) })
-//   var list = $('#output')
-//   list.empty()
-//   $.each(leaves, function (i, o) {
-//     $('<li/>').text(o.text).appendTo(list)
-//   })
-// })
-// </script> -->
-      
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>-->
+    		<p style="padding-bottom: 0px;margin-bottom: 5px;">GRADES:</p>
+      	<div id="try1" style="float:left; padding-top: 0px;margin-top: 0px;">
+      	</div>   
+     </div>
+     <div id="output" style="float:right; border: 5px solid #555; height: 400px; min-width:7%;max-width:80%; margin:10px; padding:15px;">
+     </div>
   </body>
 </html>

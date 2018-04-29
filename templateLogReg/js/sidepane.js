@@ -22,10 +22,6 @@ $(document).ready(function(){
       
  });
  
-//$("#clk").on('click',function(){
-   // $('#try1').jstree();  
-  // }); 
-  
 $('#try1').on('changed.jstree', function (e, data) {
       var objects = data.instance.get_selected(true)
       var leaves = $.grep(objects, function (o) { return data.instance.is_leaf(o) })
@@ -39,14 +35,10 @@ $('#try1').on('changed.jstree', function (e, data) {
               if(x[z]=='<'){c=1;}
               if(x[z]=='>'){c=0;f=1; continue;}
               if(!c && f==1)str+=x[z];
-              //if(!c && f==2)str2+=x[z];
               if(c==1 && f==1){
                 $('<li/>').text(str).appendTo(list);
                 str="";
               }
           }
-
-        //$('<li/>').text(str2).appendTo(list)
       })
-    });
-///});
+	});
