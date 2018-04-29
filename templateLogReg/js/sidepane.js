@@ -17,7 +17,13 @@ $(document).ready(function(){
                 }
             }
         }
-        $('#try1').jstree();
+        $('#try1').jstree({
+            "core": {
+                "check_callback" : true,
+            },
+            "plugins" : ["dnd","contextmenu","massload","search","unique","state"]
+        });
+
     });
       
  });
