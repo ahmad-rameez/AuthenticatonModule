@@ -12,4 +12,11 @@ Functionalities:
 • To parse the JSON data given in attachment file- json.txt file and display the hierarchy in a navigation-bar webpage.
 </br>
 • To allow addition of grades, subjects, chapters and questions/answers, and update UI accordingly.
+
+![Login Page](templateLogReg/assets/s1.png?raw=true "Login")
+
+</br>
+
+![Book Views](templateLogReg/assets/s2.png?raw=true "Book View")
+
  
