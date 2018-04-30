@@ -36,9 +36,9 @@ app.use(session({
   secret: 'work hard',
   resave: true,
   saveUninitialized: false,
-  store: new MongoStore({
-    mongooseConnection: url;
-  })
+  // store: new MongoStore({
+  //   mongooseConnection: url;
+  // })
 }));
 
 // parse incoming requests
