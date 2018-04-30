@@ -59,5 +59,5 @@ app.use(function (err, req, res, next) {
 
 
 app.listen(process.env.PORT || 3000, function(){
-  console.log('listening on', app.address().port);
+  //console.log('listening on', app.address().port);
 });
