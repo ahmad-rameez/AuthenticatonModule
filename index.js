@@ -4,6 +4,22 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var mongodb = require('mongodb');
+
+
+var MongoClient = mongodb.MongoClient;
+
+var url = SET mongodb://psycho-valker:Ahmadfamily2016@ds263619.mlab.com:27017/authentication-module;
+
+// Use connect method to connect to the Server
+MongoClient.connect(url, function (err, db) {
+  if (err) {
+    console.log('Unable to connect to the mongoDB server. Error:', err);
+  } else {
+    console.log('Connection established to', url);
+    }
+
+});
 
 //connect to MongoDB
 mongoose.connect('mongodb://localhost/MYTA_BUSINESS_SOL',{useMongoClient: true});
