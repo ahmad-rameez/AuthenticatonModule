@@ -12,33 +12,34 @@ var MongoClient = mongodb.MongoClient;
 var url = process.env.MONGOLAB_URI;
 
 // Use connect method to connect to the Server
-MongoClient.connect(url, function (err, db) {
-  if (err) {
-    console.log('Unable to connect to the mongoDB server. Error:', err);
-  } else {
-    console.log('Connection established to', url);
-    }
+// MongoClient.connect(url, function (err, db) {
+//   if (err) {
+//     console.log('Unable to connect to the mongoDB server. Error:', err);
+//   } else {
+//     console.log('Connection established to', url);
+//     }
 
-});
+// });
 
 // //connect to MongoDB
-// mongoose.connect('mongodb://localhost/MYTA_BUSINESS_SOL',{useMongoClient: true});
-// var db = mongoose.connection;
+mongoose.connect(url,{useMongoClient: true});
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
 
 //handle mongo error
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function () {
-//   // we're connected!
-// });
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  // we're connected!
+});
 
 //use sessions for tracking logins
 app.use(session({
   secret: 'work hard',
   resave: true,
   saveUninitialized: false,
-  // store: new MongoStore({
-  //   mongooseConnection: url;
-  // })
+  store: new MongoStore({
+    mongooseConnection: db
+  })
 }));
 
 // parse incoming requests
