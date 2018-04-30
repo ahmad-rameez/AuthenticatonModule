@@ -21,15 +21,15 @@ MongoClient.connect(url, function (err, db) {
 
 });
 
-//connect to MongoDB
-mongoose.connect('mongodb://localhost/MYTA_BUSINESS_SOL',{useMongoClient: true});
-var db = mongoose.connection;
+// //connect to MongoDB
+// mongoose.connect('mongodb://localhost/MYTA_BUSINESS_SOL',{useMongoClient: true});
+// var db = mongoose.connection;
 
 //handle mongo error
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-  // we're connected!
-});
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function () {
+//   // we're connected!
+// });
 
 //use sessions for tracking logins
 app.use(session({
