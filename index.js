@@ -9,7 +9,7 @@ var mongodb = require('mongodb');
 
 var MongoClient = mongodb.MongoClient;
 
-var url = SET mongodb://psycho-valker:Ahmadfamily2016@ds263619.mlab.com:27017/authentication-module;
+var url = mongodb://psycho-valker:Ahmadfamily2016@ds263619.mlab.com:27017/authentication-module;
 
 // Use connect method to connect to the Server
 MongoClient.connect(url, function (err, db) {
